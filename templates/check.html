@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 사서함</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        font-family: "NanumSquareRound";
+        text-align: center;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <h1>텍스트 사서함</h1>
+    <p>{{time}} 에 메시지가 도착했어요!</p>
+    <form action="/submit" method="post">
+        <div class=" input-group">
+            <span class="input-group-text">메시지</span>
+            <textarea class="form-control" aria-label="메시지" rows="10" name="msg"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="전송" class="btn btn-primary" />
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+</html>
