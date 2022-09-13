@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>텍스트 사서함</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container a-container" id="a-container">
+            <form class="form" id="a-form" method="post" action="/login">
+                <h2 class="form_title title">로그인</h2>
+                <input class="form__input" type="text" placeholder="ID" name="id" required>
+                <input class="form__input" type="password" placeholder="PW" name="pw" required>
+                <input type="submit" value="로그인" class="form__button button">
+            </form>
+        </div>
+        <div class="container b-container" id="b-container">
+            <form class="form" id="b-form" method="post" action="/register">
+                <h2 class="form_title title">회원 가입</h2>
+                <input class="form__input" type="text" placeholder="ID" name="register_id" required>
+                <input class="form__input" type="password" placeholder="PW" name="register_pw" required>
+                <input class="form__input" type="password" placeholder="Retype PW" name="register_pw2" required>
+                <input type="submit" value="회원 가입" class="form__button button">
+            </form>
+        </div>
+        <div class="switch" id="switch-cnt">
+            <div class="switch__circle"></div>
+            <div class="switch__circle switch__circle--t"></div>
+            <div class="switch__container" id="switch-c1">
+                <h2 class="switch__title title">👋 환영합니다!</h2>
+                <p class="switch__description description" style="color: rgb(29, 29, 29);">텍스트 사서함 프로그램입니다.<br>회원 가입 하려면
+                    아래의 버튼을 눌러주세요.
+                </p><button class="switch__button button switch-btn">회원 가입</button>
+            </div>
+            <div class="switch__container is-hidden" id="switch-c2">
+                <h2 class="switch__title title">👋 처음 오셨군요?</h2>
+                <p class="switch__description description" style="color: rgb(29, 29, 29);">텍스트 사서함 프로그램입니다.<br>로그인 하려면
+                    아래의 버튼을 눌러주세요.</p>
+                <button class="switch__button button switch-btn">로그인</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</html>
